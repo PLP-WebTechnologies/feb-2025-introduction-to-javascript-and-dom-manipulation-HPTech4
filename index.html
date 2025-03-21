@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLP Jacvascript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>JavaScript Assignment </h1>
+            <p id="texting"> This for styling for the tasking </p>
+      
+        <div id="message">
+            HPTech in the building
+            <button id="btn"> Click me </button>
+        </div>
+        <div class="textchanging">
+            <p id="textchanging"> I am a beginner</p>
+        </div>
+        <!-- adding item-->
+        <ul id="list">
+
+        </ul>
+        <button id="add"> Add item </button>
+    </main>
+    <script>
+        //Delclaration 
+        const me = document.getElementById("texting");
+
+        const chat = document.getElementById("textchanging");
+
+        const button = document.getElementById("btn");
+        const message = document.getElementById("message");
+        
+        const list = document.getElementById("list");
+        const addButton = document.getElementById("add");
+
+
+
+        //actions
+        me.style.color = "red";
+        me.style.fontSize = "24px";
+        
+        chat.textContent = " I am now an Intermediate developer"
+
+        button.addEventListener("click", () => {
+            message.style.display = "block";
+            message.textContent = "HPTech dey para";
+            message.style.color = "red";
+
+        });
+        //add or remove element when button clicked
+    
+
+        addButton.addEventListener("click", () => {
+            const newItem = document.createElement("li");
+            newItem.textContent = "New Item";
+            list.appendChild(newItem);
+        });
+
+    </script>
+</body>
+
+</html>
